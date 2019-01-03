@@ -8,7 +8,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  # jog_arm
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +102,10 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tormach_rb07
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+    CATKIN_DEPENDS
+        roscpp
+        rospy
+        std_msgs
 #  DEPENDS system_lib
 )
 
@@ -178,7 +180,8 @@ include_directories(
 # Install python executables
 catkin_install_python(
   PROGRAMS
-  scripts/run_sim_ui.py
+        scripts/run_sim_ui.py
+        scripts/run_machinetalk.py
 
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   )
