@@ -4,5 +4,5 @@
     version: update
 - git:
     local-name: borunte_hal
-    uri: /home/alexander/repos/roesslersystems/borunte/borunte-hal
+    uri: https://github.com/machinekoder/borunte_hal.git
     version: master
